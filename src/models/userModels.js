@@ -22,9 +22,8 @@ export const userMODEL = seq_config.define('user', {
    password: {
      type: DataTypes.STRING,
      unique: false,
-
      allowNull: false,
-    
+   
    },
    age: {
      type: DataTypes.INTEGER,
