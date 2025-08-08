@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize'
 import { seq_config } from '../DB/connection.js'
 
- const userMODEL = seq_config.define('user', {
+export const userMODEL = seq_config.define('user', {
    fname: {
      type: DataTypes.STRING,
      allowNull: false,
@@ -15,7 +15,7 @@ import { seq_config } from '../DB/connection.js'
      unique: true,
      validate: {
        isEmail: {
-         msg: 'your is invalid',
+         msg: 'your email is invalid',
        },
      },
    },
@@ -35,4 +35,3 @@ import { seq_config } from '../DB/connection.js'
    },
    
  })
-export default userMODEL
